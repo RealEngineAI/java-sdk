@@ -123,7 +123,7 @@ public class RealEngineAIClient {
                 retryAfter,
                 TimeUnit.MILLISECONDS);
         callback.getResult().exceptionally(th -> {
-            future.cancel(false);
+            future.cancel(true);
             return null;
         });
     }
@@ -147,7 +147,7 @@ public class RealEngineAIClient {
                 TimeUnit.MILLISECONDS);
         // If the future will be cancelled, cancel the future call
         callback.getResult().exceptionally(th -> {
-            future.cancel(false);
+            future.cancel(true);
             return null;
         });
     }
