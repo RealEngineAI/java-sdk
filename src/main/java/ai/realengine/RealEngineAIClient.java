@@ -104,11 +104,9 @@ public class RealEngineAIClient {
      * @return a future that will be completed with the caption, or an exception if the captioning failed
      */
     public CompletableFuture<String> getCaption(String url) {
-        var deadline = System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(5);
         var requestUrl = rootUrl.newBuilder()
                 .addPathSegment("caption")
                 .addQueryParameter("url", url)
-                .addQueryParameter("deadline", String.valueOf(deadline))
                 .build();
         var request = buildRequest(requestUrl);
         var callback = new Callback<>(STRING_RESPONSE_TYPE);
