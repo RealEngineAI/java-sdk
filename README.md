@@ -8,6 +8,28 @@ Java-based client library for [RealEngine AI API](https://www.realengine.ai/api.
 - Java 11 or newer
 - API token from the [RealEngine AI Dashboard](https://app.realengine.ai).
 
+## Installation
+
+### Maven
+
+Add the following dependency to your pom.xml file:
+
+```xml
+<dependency>
+    <groupId>ai.realengine</groupId>
+    <artifactId>realengine</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Gradle
+
+Add the following dependency to your build.gradle file:
+
+```groovy
+implementation 'ai.realengine:realengine:1.0.0'
+```
+
 ## Usage
 
 Here's a simple example of how to use the client:
